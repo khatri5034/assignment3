@@ -1,0 +1,328 @@
+Welcome to Amazon340:
+Enter your username:
+Enter your email:
+Enter your password:
+Enter your bio:
+Enter your profile picture path:
+
+Hi, Kiran Khatri, what would you like to do:
+1. Display Profile
+2. Modify Password
+3. Create Product
+4. Display All Products
+5. Display Kth Product
+6. Modify Product
+7. Sell Product
+8. Delete Product
+0. Logout
+Choice:
+
+Vendor: Kiran Khatri
+Email: keon.pgm@gmail.com
+Bio: Software Engineer
+Profile Picture: /camera/photos.jpg
+
+Hi, Kiran Khatri, what would you like to do:
+1. Display Profile
+2. Modify Password
+3. Create Product
+4. Display All Products
+5. Display Kth Product
+6. Modify Product
+7. Sell Product
+8. Delete Product
+0. Logout
+Choice:
+
+Enter the type of product (1 for Media, 2 for Good, 0 for Return):
+
+Enter media name:
+Enter media description:
+Enter media type:
+Enter target audience:
+
+Do you want to append at a specific position? (1 for Yes, 0 for No):
+
+Interstellar has been created successfully.
+
+Hi, Kiran Khatri, what would you like to do:
+1. Display Profile
+2. Modify Password
+3. Create Product
+4. Display All Products
+5. Display Kth Product
+6. Modify Product
+7. Sell Product
+8. Delete Product
+0. Logout
+Choice:
+
+Enter the type of product (1 for Media, 2 for Good, 0 for Return):
+
+Enter good name:
+Enter good description:
+Enter expiration date:
+Enter quantity:
+
+Do you want to append at a specific position? (1 for Yes, 0 for No):
+
+Ripped Jeans has been created successfully.
+
+Hi, Kiran Khatri, what would you like to do:
+1. Display Profile
+2. Modify Password
+3. Create Product
+4. Display All Products
+5. Display Kth Product
+6. Modify Product
+7. Sell Product
+8. Delete Product
+0. Logout
+Choice:
+
+Product List:
+Product 1:
+Name: Ripped Jeans
+Description: Cargo ripped jeans with many pockets
+Rating: 0
+Sold Count: 0
+Expiration date: 2030-03-11
+Quantity: 50
+
+Product 2:
+Name: Interstellar
+Description: sci-fi movie about space exploration and time dilation
+Rating: 0
+Sold Count: 0
+Type: Movie
+Target Audience: Young adults
+
+
+Hi, Kiran Khatri, what would you like to do:
+1. Display Profile
+2. Modify Password
+3. Create Product
+4. Display All Products
+5. Display Kth Product
+6. Modify Product
+7. Sell Product
+8. Delete Product
+0. Logout
+Choice:
+
+Enter the type of product (1 for Media, 2 for Good, 0 for Return):
+
+Enter media name:
+Enter media description:
+Enter media type:
+Enter target audience:
+
+Do you want to append at a specific position? (1 for Yes, 0 for No):
+
+Enter position to append (1 to 2):
+
+Lord of the Rings has been appended successfully at position 2.
+
+Hi, Kiran Khatri, what would you like to do:
+1. Display Profile
+2. Modify Password
+3. Create Product
+4. Display All Products
+5. Display Kth Product
+6. Modify Product
+7. Sell Product
+8. Delete Product
+0. Logout
+Choice:
+
+Product List:
+Product 1:
+Name: Ripped Jeans
+Description: Cargo ripped jeans with many pockets
+Rating: 0
+Sold Count: 0
+Expiration date: 2030-03-11
+Quantity: 50
+
+
+Product 2:
+Name: Lord of the Rings
+Description: Epic fantasy novel by J.R.R. Tolkien
+Rating: 0
+Sold Count: 0
+Type: Book
+Target Audience: Adults
+
+Product 3:
+Name: Interstellar
+Description: sci-fi movie about space exploration and time dilation
+Rating: 0
+Sold Count: 0
+Type: Movie
+Target Audience: Young adults
+
+
+
+Hi, Kiran Khatri, what would you like to do:
+1. Display Profile
+2. Modify Password
+3. Create Product
+4. Display All Products
+5. Display Kth Product
+6. Modify Product
+7. Sell Product
+8. Delete Product
+0. Logout
+Choice:
+
+Enter the product index to modify:
+Enter new name:
+Enter new description:
+
+Product has been modified.
+
+Hi, Kiran Khatri, what would you like to do:
+1. Display Profile
+2. Modify Password
+3. Create Product
+4. Display All Products
+5. Display Kth Product
+6. Modify Product
+7. Sell Product
+8. Delete Product
+0. Logout
+Choice:
+
+Product List:
+Product 1:
+Name: Ripped Jeans
+Description: Cargo ripped jeans with many pockets
+Rating: 0
+Sold Count: 0
+Expiration date: 2030-03-11
+Quantity: 50
+
+Product 2:
+Name: Lord of the flames
+Description: Epic movie by kiran khatri
+Rating: 0
+Sold Count: 0
+Type: Adults
+Target Audience: Adults
+
+Product 3:
+Name: Interstellar
+Description: sci-fi movie about space exploration and time dilation
+Rating: 0
+Sold Count: 0
+Type: Movie
+Target Audience: Young adults
+
+
+Hi, Kiran Khatri, what would you like to do:
+1. Display Profile
+2. Modify Password
+3. Create Product
+4. Display All Products
+5. Display Kth Product
+6. Modify Product
+7. Sell Product
+8. Delete Product
+0. Logout
+Choice:
+
+Enter the value K: 1
+
+Name: Interstellar
+Description: sci-fi movie about space exploration and time dilation
+Rating: 0
+Sold Count: 0
+Type: Movie
+Target Audience: Young adults
+
+Hi, Kiran Khatri, what would you like to do:
+1. Display Profile
+2. Modify Password
+3. Create Product
+4. Display All Products
+5. Display Kth Product
+6. Modify Product
+7. Sell Product
+8. Delete Product
+0. Logout
+Choice:
+
+Enter the product index to sell: 2
+Enter the quantity to sell: 10
+
+Media sold successfully!
+One-time access code: 936527
+Product has been sold.
+
+Hi, Kiran Khatri, what would you like to do:
+1. Display Profile
+2. Modify Password
+3. Create Product
+4. Display All Products
+5. Display Kth Product
+6. Modify Product
+7. Sell Product
+8. Delete Product
+0. Logout
+Choice: 4
+
+Product List:
+Product 1:
+Name: Ripped Jeans
+Description: Cargo ripped jeans with many pockets
+Rating: 0
+Sold Count: 0
+Expiration date: 2030-03-11
+Quantity: 50
+
+Product 2:
+Name: Lord of the flames
+Description: Epic movie by kiran khatri
+Rating: 0
+Sold Count: 1
+Type: Adults
+Target Audience: Adults
+
+Product 3:
+Name: Interstellar
+Description: sci-fi movie about space exploration and time dilation
+Rating: 0
+Sold Count: 0
+Type: Movie
+Target Audience: Young adults
+
+
+Hi, Kiran Khatri, what would you like to do:
+1. Display Profile
+2. Modify Password
+3. Create Product
+4. Display All Products
+5. Display Kth Product
+6. Modify Product
+7. Sell Product
+8. Delete Product
+0. Logout
+Choice: 8
+
+Enter the product index to delete: 3
+
+Product has been deleted.
+
+Hi, Kiran Khatri, what would you like to do:
+1. Display Profile
+2. Modify Password
+3. Create Product
+4. Display All Products
+5. Display Kth Product
+6. Modify Product
+7. Sell Product
+8. Delete Product
+0. Logout
+Choice: 0
+
+Logging you out.
