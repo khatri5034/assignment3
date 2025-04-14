@@ -70,7 +70,7 @@ void displayVendorMenu(Vendor& vendor)
 			        {
 			            string type, targetAudience; //store media type and target audience
 						shared_ptr<Media> media(new Media());
-			         cin>>*media;
+			         	cin>>*media;
 
 
 			            cout << endl;

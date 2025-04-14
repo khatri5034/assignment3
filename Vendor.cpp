@@ -144,7 +144,7 @@ bool Vendor::createProduct(std::shared_ptr<Product> product) //create new produc
 
 void Vendor::displayProductK(const int& k) const //display kth product
 {
-  cout<<productList.findKthItem(k)->getItem();
+  cout<<*(productList.findKthItem(k)->getItem().get());    // dereferencing  the shared ptr to get the data
      //call display function of product
 }
 
