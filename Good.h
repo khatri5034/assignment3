@@ -3,11 +3,9 @@
 
 #include <string>
 #include "Product.h"
-using namespace std;
+
 class Good : public Product
 {
-  friend ostream & operator<<(ostream& os, const Good &);
-  friend istream & operator>>(istream& is, Good &);
     private:
         std::string expirationDate; //store expiration date
         int quantity; //store quantity
@@ -15,7 +13,6 @@ class Good : public Product
     public:
         Good(); //default constructor
         Good(const Good& other);
-        Good& operator=(Good& other);
         Good(const std::string& name, const std::string& description, //constructor with param
             const std::string& expirationDate, const int& quantity);
         virtual ~Good(); //destructor
@@ -32,6 +29,11 @@ class Good : public Product
         * @return true if sell success, or false otherwise
         **/
         bool sell(const int& quantity);
+
+        Good& operator=(Good& other);
+
+        friend std::ostream& operator<<(std::ostream& os, const Good&);
+        friend std::istream& operator>>(std::istream& is, Good&);
 };
 
 #endif //GOOD_H

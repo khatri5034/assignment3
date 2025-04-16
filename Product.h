@@ -4,10 +4,7 @@
 #include <string>
 
 class Product
-
-
 {
-    friend std::ostream& operator<<(std::ostream& os, const Product& product);
     protected:
         std::string name; //store product name
         std::string description; //store product description
@@ -19,7 +16,6 @@ class Product
         Product(); //default constructor
         Product(const std::string& name, const std::string& description); //constructor with param
         Product(const Product& product);
-        Product& operator=(const Product& product);
         virtual ~Product(); //destructor
 
         std::string getName() const; //getters and setters
@@ -36,9 +32,6 @@ class Product
         * @post sold count increase by the quantity entered
         **/
         void sold(const int& quantity = 1);
-        
-        
-        /** display product info **/
 
         /** modify product name and description
         * @param name - new product name
@@ -46,6 +39,7 @@ class Product
         * @post change the product name and description to new one
         * @return true if modify success, or false otherwise
         **/
+
         bool modify(const std::string& name, const std::string& description);
         /** sell product
         * @param quantity - quantity being sold
@@ -53,11 +47,15 @@ class Product
         **/
         virtual bool sell(const int& quantity) = 0;
 
+        Product& operator=(const Product& product);
+
         /** compare products based on their names
         * @param otherProduct - another product being compared
         * @return true if having same name, or false otherwise
         **/
         bool operator==(const Product& otherProduct) const;
+
+        friend std::ostream& operator<<(std::ostream& os, const Product& product);
 };
 
 #endif //PRODUCT_H

@@ -1,4 +1,4 @@
-Welcome to Amazon340:
+Welcome to Amazon340!
 Enter your username:
 Enter your email:
 Enter your password:

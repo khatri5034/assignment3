@@ -29,6 +29,8 @@ class Amazon340
 		* @return a vendor object that stored the vendor
 		**/
 		Vendor getVendor() const;
+
+		friend ostream& operator<<(ostream& os, const Amazon340& amazon340);
 };
 
 #endif //AMAZON_H
