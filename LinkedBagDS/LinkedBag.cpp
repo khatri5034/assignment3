@@ -107,8 +107,32 @@ template<class ItemType>
 LinkedBag<ItemType>::~LinkedBag(){
 	clear();
 }  // end destructor
+template<class ItemType>
+LinkedBag<ItemType>& LinkedBag<ItemType>::operator=(const LinkedBag<ItemType>& aBag){
+  if (this != &aBag){
+    clear();
+    itemCount = aBag.itemCount;
+    Node<ItemType>* origChainPtr = aBag.headPtr;
+    if (origChainPtr == nullptr)
+      headPtr = nullptr;
+    else{
+      headPtr = new Node<ItemType>();
+      headPtr->setItem(origChainPtr->getItem());
+      Node<ItemType>* newChainPtr = headPtr;
+      origChainPtr = origChainPtr->getNext();
+      while (origChainPtr != nullptr){
+        ItemType nextItem = origChainPtr->getItem();
+        Node<ItemType>* newNodePtr = new Node<ItemType>(nextItem);
+        newChainPtr->setNext(newNodePtr);
+        newChainPtr = newChainPtr->getNext();
+        origChainPtr = origChainPtr->getNext();
 
+      }
+    }
 
+  }
+  return *this;
+  }
 template<class ItemType>
 bool LinkedBag<ItemType>::isEmpty() const{
 	return itemCount == 0;

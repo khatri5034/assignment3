@@ -25,8 +25,9 @@ private:
 public:
 	LinkedBag();
 	LinkedBag(const LinkedBag<ItemType>& aBag); // Copy constructor
-	virtual ~LinkedBag();						// Destructor should be virtual
-
+	virtual ~LinkedBag();
+	LinkedBag<ItemType>& operator=(const LinkedBag<ItemType>& aBag);
+        // Destructor should be virtual
 	// Assignment 2 functions -------------------------------------------
 	bool appendK(const ItemType& newEntry, const int& k);
 	Node<ItemType>* findKthItem(const int& indexK) const;
