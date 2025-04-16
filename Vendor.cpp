@@ -12,26 +12,16 @@ Vendor::Vendor() {} //default constructor
 Vendor::Vendor(const string& username, const string& email, const string& password, const string& bio, const string& profilePicture) //constructor with param
     : username(username), email(email), password(password), bio(bio), profilePicture(profilePicture) {}
 
-Vendor::Vendor(const Vendor& other){
+Vendor::Vendor(const Vendor& other)
+{
     username = other.username;
     email = other.email;
     password = other.password;
     bio = other.bio;
     profilePicture = other.profilePicture;
 
-  }// copy constructor
+}// copy constructor
 
-Vendor& Vendor::operator=(const Vendor& other){
-    if(this != &other){
-      username = other.username;
-      email = other.email;
-      password = other.password;
-      bio = other.bio;
-      profilePicture = other.profilePicture;
-    }
-    return *this;
-
-  }
 Vendor::~Vendor() {} //destructor
 
 string Vendor::getUsername() const //username getter
@@ -88,38 +78,13 @@ int Vendor::getProductListSize() const //retrieve size of product list
 {
     return productList.getCurrentSize();
 }
-std::ostream& operator<<(std::ostream& os, const Vendor& other){
-    os << "Vendor: " << other.getUsername() << endl << "Email: " << other.getEmail() << endl //print vendor profile
-          << "Bio: " << other.getBio() << endl << "Profile Picture: " << other.getProfilePicture() << endl;
-    return os;
-}
+
 //void Vendor::displayProfile() const //display vendor profile
 //{
 //    cout << "Vendor: " << getUsername() << endl << "Email: " << getEmail() << endl //print vendor profile
 //        << "Bio: " << getBio() << endl << "Profile Picture: " << getProfilePicture() << endl;
 //}
- std::istream& operator>>(std::istream& is, Vendor& other){
 
-
-
-    cout << "Enter your username: " << endl;; //prompt for vendor info
-    getline(is, other.username);
-
-    cout << "Enter your email: " << endl;;
-    getline(is, other.email);
-
-    cout << "Enter your password: " << endl;;
-    getline(is, other.password);
-
-    cout << "Enter your bio: " << endl;;
-    getline(is, other.bio);
-
-    cout << "Enter your profile picture path: " << endl;;
-    getline(is, other.profilePicture);
-
-
-  return is;
-  }
 bool Vendor::modifyPassword(const string& newPassword) //modify vendor password
 {
     if (getPassword() != newPassword) //if different from old password
@@ -144,25 +109,22 @@ bool Vendor::createProduct(std::shared_ptr<Product> product) //create new produc
 
 void Vendor::displayProductK(const int& k) const //display kth product
 {
-  cout<<*(productList.findKthItem(k)->getItem().get());    // dereferencing  the shared ptr to get the data
-     //call display function of product
+    cout << *(productList.findKthItem(k)->getItem().get()); //dereferencing the shared ptr to get the data
 }
 
 void Vendor::displayAllProducts() const //display all products from product list
 {
    vector<shared_ptr<Product> > products = productList.toVector(); //transfer product list to vector
     if (products.empty()) //if the list is empty
-    {
        cout << "No products available." << endl;
-   }
-   else //if there is product in the list
-  {
+    else //if there is product in the list
+    {
        for (int i = 0; i < products.size(); i++) //loop for all products
        {
            cout << "Product " << (i + 1) << ":" << endl; //print position of product
-           cout<<*((products[i]).get()); //call display function of product
-          cout << endl;
-      }
+           cout << *((products[i]).get()); //call display function of product
+           cout << endl;
+       }
     }
 }
 
@@ -191,7 +153,49 @@ bool Vendor::appendK(shared_ptr<Product> product, const int& k) //append product
     return 1;
 }
 
+Vendor& Vendor::operator=(const Vendor& other)
+{
+    if (this != &other)
+    {
+        username = other.username;
+        email = other.email;
+        password = other.password;
+        bio = other.bio;
+        profilePicture = other.profilePicture;
+    }
+
+    return *this;
+}
+
 bool Vendor::operator==(const Vendor& otherVendor) const //operator to compare vendors
 {
     return (Vendor::username == otherVendor.username) && (Vendor::email == otherVendor.email);
+}
+
+ostream& operator<<(std::ostream& os, const Vendor& other)
+{
+    os << "Vendor: " << other.getUsername() << endl << "Email: " << other.getEmail() << endl //print vendor profile
+          << "Bio: " << other.getBio() << endl << "Profile Picture: " << other.getProfilePicture() << endl;
+
+    return os;
+}
+
+istream& operator>>(std::istream& is, Vendor& other)
+{
+    cout << "Enter your username: " << endl;; //prompt for vendor info
+    getline(is, other.username);
+
+    cout << "Enter your email: " << endl;;
+    getline(is, other.email);
+
+    cout << "Enter your password: " << endl;;
+    getline(is, other.password);
+
+    cout << "Enter your bio: " << endl;;
+    getline(is, other.bio);
+
+    cout << "Enter your profile picture path: " << endl;;
+    getline(is, other.profilePicture);
+
+  return is;
 }

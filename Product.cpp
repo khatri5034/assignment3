@@ -8,28 +8,13 @@ Product::Product() {} //default constructor
 
 Product::Product(const string& name, const string& description) //constructor with param
     : name(name), description(description) {}
-Product::Product(const Product& product){
-  name = product.getName();
-  description = product.getDescription();
 
-  }
-std::ostream& operator<<(std::ostream& os, const Product& product)
+Product::Product(const Product& product)
 {
-    os << "Name: " << product.getName() << endl
-       << "Description: " << product.getDescription() << endl
-       << "Rating: " << product.getRating() << endl
-       << "Sold Count: " << product.getSoldCount() << endl;
-    return os;
+    name = product.getName();
+    description = product.getDescription();
 }
-Product& Product::operator=(const Product& product){
-  if (this != &product){
-  name = product.getName();
-  description = product.getDescription();
-  }
 
-  return *this;
-
-}
 Product::~Product() {} //destructor
 
 string Product::getName() const //name getter
@@ -85,7 +70,28 @@ bool Product::modify(const string& name, const string& description) //modify pro
     return 1;
 }
 
+Product& Product::operator=(const Product& product)
+{
+    if (this != &product)
+    {
+        name = product.getName();
+        description = product.getDescription();
+    }
+
+    return *this;
+}
+
 bool Product::operator==(const Product& otherProduct) const //operator to compare products
 {
 	return Product::name == otherProduct.name;
+}
+
+ostream& operator<<(ostream& os, const Product& product)
+{
+    os << "Name: " << product.getName() << endl
+       << "Description: " << product.getDescription() << endl
+       << "Rating: " << product.getRating() << endl
+       << "Sold Count: " << product.getSoldCount() << endl;
+
+    return os;
 }

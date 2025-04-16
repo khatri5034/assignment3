@@ -4,11 +4,11 @@
 #include <string>
 #include <vector>
 #include "Product.h"
+
 using namespace std;
+
 class Media : public Product //subclass of product
 {
-  friend ostream& operator<<(ostream& os , const Media& media);
-    friend istream& operator>>(istream& is , Media& media);
     private:
         std::string type; //store media type
         std::string targetAudience; //store target audience
@@ -18,7 +18,6 @@ class Media : public Product //subclass of product
         Media(const std::string& name, const std::string& description,  //constructor with param
             const std::string& type, const std::string& targetAudience);
         Media(const Media& Media);
-        Media& operator=(const Media& Media);
         virtual ~Media(); //destructor
 
 
@@ -34,6 +33,11 @@ class Media : public Product //subclass of product
         * @return true if sell success, or false otherwise
         **/
         bool sell(const int& quantity);
+
+        Media& operator=(const Media& Media);
+
+        friend ostream& operator<<(ostream& os, const Media& media);
+        friend istream& operator>>(istream& is, Media& media);
 };
 
 #endif //MEDIA_H

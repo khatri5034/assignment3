@@ -36,7 +36,7 @@ void displayVendorMenu(Vendor& vendor)
 		{
 			case 1: //display profile
 			{
-				cout<<vendor;
+				cout << vendor;
 				break;
 			}
 			case 2: //modify password
@@ -70,7 +70,7 @@ void displayVendorMenu(Vendor& vendor)
 			        {
 			            string type, targetAudience; //store media type and target audience
 						shared_ptr<Media> media(new Media());
-			         	cin>>*media;
+			         	cin >> *media;
 
 
 			            cout << endl;
@@ -105,7 +105,7 @@ void displayVendorMenu(Vendor& vendor)
 			            string expirationDate; //store good expiration date
 			            int quantity; //store good quantity
 						shared_ptr<Good> good(new Good());
-			            cin>> *good;
+			            cin >> *good;
 
 
 			            cout << endl;
@@ -263,17 +263,12 @@ void displayVendorMenu(Vendor& vendor)
 int main() //main
 {
 	Amazon340 amazon340; //store amazon340 object
-	string username, email, password, bio, profilePicture; //store vendor info
+	Vendor vendor;
+	//string username, email, password, bio, profilePicture; //store vendor info
 
-	cout << "Welcome to Amazon340:" << endl;
+	cout << amazon340;
 
-
-			Vendor vendor;
-			cin>>vendor;
-
-
-
-
+	cin >> vendor;
 
 	displayVendorMenu(vendor); //display main menu
 				
